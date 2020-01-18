@@ -1,4 +1,4 @@
-package gid 
+package gid
 
 import (
 	"testing"
@@ -8,7 +8,7 @@ import (
 )
 
 func TestShortID(t *testing.T) {
-  // Standard UUIDs.
+	// Standard UUIDs.
 	for i := 0; i < 1000; i++ {
 		id := uuid.New()
 		shortID := GetShortID(id)
@@ -17,19 +17,19 @@ func TestShortID(t *testing.T) {
 		assert.Equal(t, id.String(), newID.String())
 	}
 
-  // Nil UUID.
-  shortNilID := GetShortID(uuid.Nil)
-  nilID, err := GetUUIDFromShortID(shortNilID)
-  assert.NoError(t, err)
-  assert.Equal(t, uuid.Nil.String(), nilID.String())
+	// Nil UUID.
+	shortNilID := GetShortID(uuid.Nil)
+	nilID, err := GetUUIDFromShortID(shortNilID)
+	assert.NoError(t, err)
+	assert.Equal(t, uuid.Nil.String(), nilID.String())
 
-  // Broken short ID.
-  _, err = GetUUIDFromShortID("abcdefghijklmnopqrstuvwxyz1234567890")
-  assert.Error(t, err)
+	// Broken short ID.
+	_, err = GetUUIDFromShortID("abcdefghijklmnopqrstuvwxyz1234567890")
+	assert.Error(t, err)
 }
 
 func TestCollapsedID(t *testing.T) {
-  // Standard UUIDs.
+	// Standard UUIDs.
 	for i := 0; i < 1000; i++ {
 		id := uuid.New()
 		collapsedID := GetCollapsedID(id)
@@ -38,13 +38,13 @@ func TestCollapsedID(t *testing.T) {
 		assert.Equal(t, id.String(), newID.String())
 	}
 
-  // Nil UUID.
-  collapsedNilID := GetCollapsedID(uuid.Nil)
-  nilID, err := GetUUIDFromCollapsedID(collapsedNilID)
-  assert.NoError(t, err)
-  assert.Equal(t, uuid.Nil.String(), nilID.String())
-  
-  // Broken collapsed ID.
-  _, err = GetUUIDFromCollapsedID("abcdefghijklmnopqrstuvwxyz1234567890")
-  assert.Error(t, err)
+	// Nil UUID.
+	collapsedNilID := GetCollapsedID(uuid.Nil)
+	nilID, err := GetUUIDFromCollapsedID(collapsedNilID)
+	assert.NoError(t, err)
+	assert.Equal(t, uuid.Nil.String(), nilID.String())
+
+	// Broken collapsed ID.
+	_, err = GetUUIDFromCollapsedID("abcdefghijklmnopqrstuvwxyz1234567890")
+	assert.Error(t, err)
 }
