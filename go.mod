@@ -1,4 +1,4 @@
-module hashamali/gid
+module github.com/hashamali/gid
 
 go 1.12
 
