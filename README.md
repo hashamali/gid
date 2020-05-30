@@ -1,6 +1,9 @@
-## gid
-
-[![CircleCI](https://circleci.com/gh/hashamali/gid/tree/master.svg?style=svg)](https://circleci.com/gh/hashamali/gid/tree/master)
+# gid
+[![tests](https://img.shields.io/github/workflow/status/hashamali/gid/tests?label=tests&style=flat-square)](https://github.com/hashamali/gid/actions?query=workflow%3Atests)
+[![sec](https://img.shields.io/github/workflow/status/hashamali/gid/security?label=security&style=flat-square)](https://github.com/hashamali/gid/actions?query=workflow%3Asecurity)
+[![coverage](https://img.shields.io/codecov/c/github/hashamali/gid)](https://codecov.io/gh/hashamali/gid)
+[![go-report](https://goreportcard.com/badge/github.com/hashamali/gid)](https://goreportcard.com/report/github.com/hashamali/gid)
+[![license](https://badgen.net/github/license/hashamali/gid)](https://opensource.org/licenses/MIT)
 
 Helper that converts UUIDs to base62 short IDs (which are 22 characters long), or strings without dashes. And vice versa.
 
