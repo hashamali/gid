@@ -1,4 +1,5 @@
 # gid
+[![godoc](https://godoc.org/github.com/hashamali/gid?status.svg)](http://godoc.org/github.com/hashamali/gid)
 [![tests](https://img.shields.io/github/workflow/status/hashamali/gid/tests?label=tests&style=flat-square)](https://github.com/hashamali/gid/actions?query=workflow%3Atests)
 [![sec](https://img.shields.io/github/workflow/status/hashamali/gid/security?label=security&style=flat-square)](https://github.com/hashamali/gid/actions?query=workflow%3Asecurity)
 [![coverage](https://img.shields.io/codecov/c/github/hashamali/gid)](https://codecov.io/gh/hashamali/gid)
@@ -7,7 +8,7 @@
 
 Helper that converts UUIDs to base62 short IDs (which are 22 characters long), or strings without dashes. And vice versa.
 
-#### Methods
+#### API
 
 * `GetShortID`: Converts a UUID into a base62 encoded 22 character string.
 * `GetUUIDFromShortID`: Converts a valid base62 encoded 22 character string into a UUID, returns an error if invalid.
